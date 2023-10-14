@@ -1,0 +1,4 @@
+dev\me\service\CrudService.class
+dev\me\Application.class
+dev\me\model\Course.class
+dev\me\service\CourseService.class
