@@ -5,28 +5,35 @@ import java.util.List;
 import java.util.Optional;
 
 import dev.me.model.Course;
+import dev.me.repository.CourseRepository;
 
 public class CourseService implements CrudService<Course> {
 	
-	private List<Course> courses;
+	// private List<Course> courses;
+	private CourseRepository repository;
 	
 	
 
-	public CourseService() {
-		courses = new ArrayList<>();
-		Course springCourse = new Course(1, 
-				"Getting Started", 
-				"Lern to build app ", 
-				"https://learn.dev"); 
-		
-		courses.add(springCourse);
+	public CourseService(CourseRepository courseRepository) {
+		// courses = new ArrayList<>();
+		// Course springCourse = new Course(1, 
+		// 		"Getting Started", 
+		// 		"Lern to build app ", 
+		// 		"https://learn.dev"); 
+		// 
+		// courses.add(springCourse);
+
+		// repository = new CourseRepository();
+
+		// with Bean
+		repository = courseRepository;
 	}
 
 
 
 	@Override
 	public List<Course> list() {
-		return courses;
+		return repository.findAll();
 	}
 
 
