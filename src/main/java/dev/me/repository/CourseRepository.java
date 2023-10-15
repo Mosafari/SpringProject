@@ -3,8 +3,11 @@ package dev.me.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import dev.me.model.Course;
 
+@Repository
 public class CourseRepository implements CrudInterface<Course>{
 
     @Override

@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import dev.me.model.Course;
 import dev.me.repository.CourseRepository;
-
+@Service
 public class CourseService implements CrudService<Course> {
 	
 	// private List<Course> courses;
