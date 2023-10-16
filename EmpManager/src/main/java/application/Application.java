@@ -12,8 +12,8 @@ public class Application {
 	public static void main(String[] args) {
 		//using @Configuration class
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-		Employee emp = applicationContext.getBean("emp1", Employee.class);
-		System.out.println(emp);
+//		Employee emp = applicationContext.getBean("emp1", Employee.class);
+//		System.out.println(emp);
 		EmpServiceIImpl empServiceIImpl = applicationContext.getBean("empServiceImpl", EmpServiceIImpl.class);
 		System.out.println(empServiceIImpl.list());
 	}

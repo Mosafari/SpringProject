@@ -9,21 +9,28 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import model.Employee;
+import repository.EmpRepository;
 
 @Service("empServiceImpl")
 public class EmpServiceIImpl implements CrudService<Employee> {
-	List<Employee> list = new ArrayList<>();
+//	List<Employee> list = new ArrayList<>(); //no longer needed
+	EmpRepository repository;
+	
+	
+	public EmpServiceIImpl(EmpRepository empRepository) {
+		this.repository = empRepository;
+}
 
 	@Override
 	public List<Employee> list() {
-		return list;
+		return repository.findAll();
 	}
 
 	@Override
-	@Autowired @Qualifier("emp1")
+//	@Autowired @Qualifier("emp1")
 	public Employee create(Employee t) {
-		list.add(t);
-		return t;
+//		list.add(t);
+		return null;
 	}
 
 	@Override

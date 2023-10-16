@@ -5,7 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import model.Employee;
-import service.EmpServiceIImpl;
+//import service.EmpServiceIImpl;
 
 @Configuration
 @ComponentScan("..") // parent. 
@@ -16,11 +16,11 @@ public class AppConfig {
 //		return new EmpServiceIImpl();
 //	}
 	
-	@Bean("emp1")
-	public Employee createBookInstance() {
-		Employee emp1 = new Employee(1, "amir", "haji", "manager");
-        
-        return emp1;
-    } 
+//	@Bean("emp1")
+//	public Employee createBookInstance() {
+//		Employee emp1 = new Employee(1, "amir", "haji", "manager@g.com");
+//        
+//        return emp1;
+//    } 
 
 }
